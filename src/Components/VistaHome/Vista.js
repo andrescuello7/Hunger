@@ -1,10 +1,9 @@
 import UseFilter from "../../UseForm/UseFilter"
 
-const Vista = () => {
-    const { extract, dato, lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo } = UseFilter()
-                    
-    const proyectar = extract.map((ext, i) => (<p key={i}>{ext.comida}</p>))
 
+const Vista = () => {
+    const { temperatura, datos, input, extract, dato, lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo } = UseFilter()            
+    const proyectar = extract.map((ext, i) => (<p key={i}>{ext.comida}</p>))
     return (
       <div>
         <div>

@@ -1,10 +1,18 @@
 import { getStorageArray } from "../Utils/UtilsStorage"
 import { useState, useEffect } from "react"
+import UseHome from "./UseHome"
 
 const Usefilter = () =>{
+    const { input } = UseHome()  
     const [ dato, setDato ] = useState("")
+    const [ temperatura, setTemperatura ] = useState([])
     const datos = getStorageArray('comida')
-    const extract = datos.filter((ext)=>  ext.dia === dato);
+    const extract = temperatura.filter((ext)=> ext.dia === dato);
+
+    useEffect(()=>{
+        TemperaturaResultado()
+    }, [])
+
     const lunes = () =>{
         setDato("Lunes")
     }
@@ -26,9 +34,20 @@ const Usefilter = () =>{
     const Domingo = () =>{
         setDato("Domingo")
     }
+    const TemperaturaResultado = () =>{
+        if (input > 22) {
+            const extracTemp = datos.filter((temp)=>  temp.temperatura === "Frio");
+            setTemperatura(extracTemp)
+        } else {
+            const extracTemp = datos.filter((temp)=>  temp.temperatura === "Calor");
+            setTemperatura(extracTemp)
+        }
+    }
     
     return {
+        temperatura,
         extract,
+        input,
         dato,
         lunes,
         Martes,
@@ -36,7 +55,8 @@ const Usefilter = () =>{
         Jueves,
         Viernes,
         Sabado,
-        Domingo
+        Domingo,
+        datos
     }
 }
 
