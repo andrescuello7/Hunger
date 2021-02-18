@@ -26,17 +26,10 @@ const UseAgregar = () => {
         const objeto = { ...texto, [name]: value };
         setTexto(objeto);
     }
-    const OnDelete = () => {
-        console.log("nada")
-        //const cuentas = getStorageArray("comida");
-        //const filteredUsers = cuentas.filter((cuenta) => cuenta.id !== Id);
-        //setStorage("comida", filteredUsers);
-    }
     return {
         ButtonOnSubmit,
         handleClose,
         handleShow,
-        OnDelete,
         OnChange,
         texto,
         show
