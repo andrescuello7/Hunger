@@ -5,6 +5,9 @@ const Home = () => {
 
   return (
     <div>
+      <div>
+        <a href="/subir">Agregar +</a>
+      </div>
       <h1>{temperatura}</h1>
     </div>
   );
