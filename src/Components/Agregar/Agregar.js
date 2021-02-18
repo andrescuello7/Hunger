@@ -10,7 +10,9 @@ const Agregar = () => {
             <Button variant="primary" onClick={handleShow}>
                 Agregar Comida
             </Button>
-
+            <a className="btn btn-primary" href="/home" type="submit">
+                        Rec
+            </a>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Agregar Una Comida</Modal.Title>
@@ -42,7 +44,7 @@ const Agregar = () => {
                             </select>
                         </Form.Group>
                     </Form>
-                    <Button variant="primary" type="submit">
+                    <Button className="btn btn-primary" type="submit">
                         Agregar
                     </Button>
                 </Form>

@@ -7,7 +7,10 @@ const UseAgregar = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     //UseState de Inputs
-    const [ texto, setTexto ] = useState({ comida: " ", dia: " ", temperatura: " " })
+    const generateId = function () {
+        return '_' + Math.random().toString(36).substr(2, 9);
+    };
+    const [ texto, setTexto ] = useState({ comida: " ", dia: " ", temperatura: " ", id: generateId() })
 
     //Funciones
     const ButtonOnSubmit = (e) =>{
@@ -23,10 +26,17 @@ const UseAgregar = () => {
         const objeto = { ...texto, [name]: value };
         setTexto(objeto);
     }
+    const OnDelete = () => {
+        console.log("nada")
+        //const cuentas = getStorageArray("comida");
+        //const filteredUsers = cuentas.filter((cuenta) => cuenta.id !== Id);
+        //setStorage("comida", filteredUsers);
+    }
     return {
         ButtonOnSubmit,
         handleClose,
         handleShow,
+        OnDelete,
         OnChange,
         texto,
         show

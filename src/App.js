@@ -13,7 +13,7 @@ function App() {
           <Route path="/" exact>
             <HomePage />
           </Route>
-          <Route path="/subir">
+          <Route path="/home">
             <AgregarPage />
           </Route>
         </Switch>

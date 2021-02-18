@@ -1,8 +1,12 @@
 import Agregar from "../Components/Agregar/Agregar"
+import Datos from "../Components/Formulario/Datos"
 
 const AgregarPage = () => {
     return (
-        <Agregar />
+        <div>
+            <Agregar />
+            <Datos />
+        </div>
     )
 }
 export default AgregarPage;

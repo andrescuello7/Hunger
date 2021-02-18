@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       <div>
-        <a href="/subir">Agregar +</a>
+        <a href="/home">Agregar +</a>
       </div>
       <h1>{temperatura}</h1>
     </div>
