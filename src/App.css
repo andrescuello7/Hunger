@@ -1,0 +1,32 @@
+.App{
+    margin: 0%;
+    height: 1500px;
+    background: rgb(39, 38, 37);
+    color: seashell;
+}
+.Buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Buttonss{
+    display: flex;
+    justify-content: center;
+}
+.Routes{
+    margin: 42% 0%;
+}
+.DatosVista{
+    color: seashell;
+}
+@media (max-Width: 780px ){
+    .App{
+        margin: 0%;
+        height: 700px;
+        background: rgb(39, 38, 37);
+        color: seashell;
+    }
+    .Buttons{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

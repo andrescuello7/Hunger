@@ -1,14 +1,16 @@
 import UseHome from "../../UseForm/UseHome"
 
 const Home = () => {
-  const { temperatura } = UseHome()
+  const { temperatura, input } = UseHome()
 
   return (
     <div>
-      <div>
-        <a href="/home">Agregar +</a>
+      <div className="w-100">
+        <h1 className="text-center">Hoy hace {temperatura}</h1>
       </div>
-      <h1>{temperatura}</h1>
+      <div className="w-100">
+        <h1 className="text-center">{input}º</h1>
+      </div>
     </div>
   );
 }

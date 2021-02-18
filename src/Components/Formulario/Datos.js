@@ -10,9 +10,9 @@ const Datos = () => {
     const resutExtract = mostrar.map((art, i)=>(<FormStatic article={art} id={i} />))
 
     return (
-        <div>
+        <div className="DatosVista">
             <Table striped bordered hover>
-                <thead>
+                <thead className="DatosVista">
                     <tr>
                     <th>Dia</th>
                     <th>Comida</th>
@@ -20,10 +20,13 @@ const Datos = () => {
                     <th>Opcion</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="DatosVista">
                     <>{resutExtract}</>
                 </tbody>
             </Table>
+            <div>
+                <a href="/">Home</a>
+            </div>
         </div>
     )
 };

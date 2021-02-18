@@ -14,11 +14,13 @@ const FormStatict = (props) => {
     }
 
     return (
-        <tr>
+        <tr className="DatosVista">
             <td>{props.article.dia}</td>
             <td>{props.article.comida}</td>
             <td>{props.article.temperatura}</td>
-            <button className="btn btn-danger" onClick={OnDelete}>delete</button>
+            <td>
+                <button className="btn btn-danger Buttonss" onClick={OnDelete}>delete</button>
+            </td>
         </tr>
     )
 }
