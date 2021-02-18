@@ -1,29 +1,10 @@
-import { Button, Modal, Form, InputGroup, Dropdown, DropdownButton } from "react-bootstrap"
-import { useState } from "react"
-import { getStorageArray, setStorage } from "../../Utils/UtilsStorage"
+import { Button, Modal, Form } from "react-bootstrap"
+import UseAgregar from "../../UseForm/UseAgregar"
 
 const Agregar = () => {
-    //UseState de Modal
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    //UseState de Inputs
-    const [ texto, setTexto ] = useState({ comida: " ", dia: " ", temperatura: " " })
 
-    //Funciones
-    const ButtonOnSubmit = (e) =>{
-        e.preventDefault();
-        e.stopPropagation();
-        const cuentas = getStorageArray("comida");
-        const cuentasUp = [...cuentas, texto];
-        setStorage("comida", cuentasUp);
-    }
-    const OnChange = (e) =>{
-        const value = e.target.value;
-        const name = e.target["name"];
-        const objeto = { ...texto, [name]: value };
-        setTexto(objeto);
-    }
+    const { OnChange, ButtonOnSubmit, texto, handleClose, handleShow, show } = UseAgregar()
+
     return (
         <>
             <Button variant="primary" onClick={handleShow}>
