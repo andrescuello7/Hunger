@@ -1,7 +1,9 @@
 .App{
     margin: 0%;
-    height: 1500px;
-    background: rgb(39, 38, 37);
+    height: 700px;
+    background: url(https://www.wallpapertip.com/wmimgs/25-251975_storm-wallpaper-weather.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     color: seashell;
 }
 .Buttons{
@@ -12,21 +14,45 @@
     display: flex;
     justify-content: center;
 }
-.Routes{
-    margin: 42% 0%;
-}
 .DatosVista{
-    color: seashell;
+    margin: 2%;
+    color: rgba(247, 239, 239, 0.897);
+    border: none;
+    background: rgba(17, 17, 17, 0.74);
+    border-radius: 1rem;
+}
+.vista{
+    margin: 2%;
+    text-align: center;
+}
+.visto{
+    width: 96%;
+}
+.agregar{
+    margin: 0%;
+    border: 2px solid rgba(209, 203, 203, 0.692);
+    background: rgba(17, 17, 17, 0.616);
+    padding: 4% ;
+    text-align: center;
+}
+.dataso{
+    padding: 2%;
+    margin: 14% 0%;
+    background: rgba(37, 37, 37, 0.842);
+    border-radius: 1rem;
+    color: rgb(222, 224, 230);
 }
 @media (max-Width: 780px ){
     .App{
         margin: 0%;
         height: 700px;
-        background: rgb(39, 38, 37);
-        color: seashell;
+        background: url(https://i.pinimg.com/originals/1a/05/b4/1a05b475a964ec0c563c9c2c8383d0ae.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: rgb(243, 240, 236);
     }
     .Buttons{
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 }

@@ -6,48 +6,52 @@ const Agregar = () => {
     const { OnChange, ButtonOnSubmit, texto, handleClose, handleShow, show } = UseAgregar()
 
     return (
-        <>
-            <Button variant="primary" onClick={handleShow}>
-                Agregar Comida
-            </Button>
+        <div className="p-2">
+            <div>
+                <a variant="primary" onClick={handleShow}>
+                    <div className="agregar">
+                        <b>+</b>
+                    </div>
+                </a>
+            </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Agregar Una Comida</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                <Form onSubmit={ButtonOnSubmit}>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Agregar Comida</Form.Label>
-                        <Form.Control type="text" name="comida" onChange={OnChange} placeholder="Ingrese Comida" />
-                    </Form.Group>
-                    <Form className="Opciones">
+                    <Form onSubmit={ButtonOnSubmit}>
                         <Form.Group controlId="formBasicEmail">
-                            <select class="form-control"  name="dia" onChange={OnChange} required>
-                                <option disabled selected>Para que dia?</option>
-                                <option>Lunes</option>
-                                <option>Martes</option>
-                                <option>Miercoles</option>
-                                <option>Jueves</option>
-                                <option>Viernes</option>
-                                <option>Sabado</option>
-                                <option>Domingo</option>
-                            </select>
+                            <Form.Label>Agregar Comida</Form.Label>
+                            <Form.Control type="text" name="comida" onChange={OnChange} placeholder="Ingrese Comida" />
                         </Form.Group>
-                        <Form.Group controlId="formBasicEmail">
-                        <select class="form-control" name="temperatura" onChange={OnChange} required>
-                                <option disabled selected>Cuando hace Calor o Frio?</option>
-                                <option>Frio</option>
-                                <option>Calor</option>
-                            </select>
-                        </Form.Group>
-                    </Form>
-                    <Button className="btn btn-primary" type="submit">
-                        Agregar
+                        <Form className="Opciones">
+                            <Form.Group controlId="formBasicEmail">
+                                <select class="form-control" name="dia" onChange={OnChange} required>
+                                    <option disabled selected>Para que dia?</option>
+                                    <option>Lunes</option>
+                                    <option>Martes</option>
+                                    <option>Miercoles</option>
+                                    <option>Jueves</option>
+                                    <option>Viernes</option>
+                                    <option>Sabado</option>
+                                    <option>Domingo</option>
+                                </select>
+                            </Form.Group>
+                            <Form.Group controlId="formBasicEmail">
+                                <select class="form-control" name="temperatura" onChange={OnChange} required>
+                                    <option disabled selected>Cuando hace Calor o Frio?</option>
+                                    <option>Frio</option>
+                                    <option>Calor</option>
+                                </select>
+                            </Form.Group>
+                        </Form>
+                        <Button className="btn btn-primary" type="submit">
+                            Agregar
                     </Button>
-                </Form>
+                    </Form>
                 </Modal.Body>
             </Modal>
-        </>
+        </div>
     );
 }
 export default Agregar;

@@ -4,12 +4,12 @@ const Home = () => {
   const { temperatura, input } = UseHome()
 
   return (
-    <div>
+    <div className="dataso">
       <div className="w-100">
-        <h1 className="text-center">Hoy hace {temperatura}</h1>
+        <h1 className="text-center vistaDeHoy"><b>Hoy hace {temperatura}</b></h1>
       </div>
       <div className="w-100">
-        <h1 className="text-center">{input}º</h1>
+        <h1 className="text-center vistaDeHoy"><b>{input}º</b></h1>
       </div>
     </div>
   );

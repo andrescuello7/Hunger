@@ -7,25 +7,24 @@ import { Table } from "react-bootstrap"
 const Datos = () => {
 
     const mostrar = getStorageArray("comida")
-    const resutExtract = mostrar.map((art, i)=>(<FormStatic article={art} id={i} />))
+    const resutExtract = mostrar.map((art, i) => (<FormStatic article={art} id={i} />))
 
     return (
-        <div className="DatosVista">
-            <Table striped bordered hover>
-                <thead className="DatosVista">
-                    <tr>
-                    <th>Dia</th>
-                    <th>Comida</th>
-                    <th>Calor o Frio</th>
-                    <th>Opcion</th>
-                    </tr>
-                </thead>
-                <tbody className="DatosVista">
-                    <>{resutExtract}</>
-                </tbody>
-            </Table>
-            <div>
-                <a href="/">Home</a>
+        <div>
+            <div className="visto">
+                <table className="vista table">
+                        <thead className="DatosVista">
+                            <tr>
+                                <th scope="col">Dia</th>
+                                <th scope="col">Comida</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Opcion</th>
+                            </tr>
+                        </thead>
+                        <tbody className="DatosVista">
+                            <>{resutExtract}</>
+                        </tbody>
+                </table>
             </div>
         </div>
     )
