@@ -46,6 +46,7 @@
 @media (max-Width: 780px ){
     .App{
         margin: 0%;
+        width: 110%;
         height: 700px;
         background: url(https://mobilehd.blob.core.windows.net/main/2015/11/road-fog-mountain-car-sky.jpg);
         background-size: cover;
