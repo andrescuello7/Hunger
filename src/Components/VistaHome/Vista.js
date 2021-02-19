@@ -16,11 +16,8 @@ const Vista = () => {
         <button className="btn btn-outline-info" onClick={Sabado}><b>Sa</b></button>
         <button className="btn btn-outline-info" onClick={Domingo}><b>Dom</b></button>
       </div>
-      <div className="Routes">
-        <a href="/home">Agregar +</a>
-      </div>
       <div className="columna">
-        <div>
+        <div className="mt-2">
           <Home />
         </div>
         <div className="container">
