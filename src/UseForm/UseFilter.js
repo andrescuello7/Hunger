@@ -43,9 +43,10 @@ const Usefilter = () =>{
             setTemperatura(extracTemp)
         }
     }
-    
+    const proyectar = extract.map((ext, i) => (<div className="name" key={i}>{ext.comida}</div>))
     return {
         temperatura,
+        proyectar,
         extract,
         input,
         dato,

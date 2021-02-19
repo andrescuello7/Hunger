@@ -9,6 +9,8 @@
 .Buttons{
     display: flex;
     justify-content: space-evenly;
+    background: rgba(17, 17, 17, 0.623);
+    padding: 1%;
 }
 .Buttonss{
     display: flex;
@@ -37,7 +39,6 @@
 }
 .dataso{
     padding: 2%;
-    margin: 14% 0%;
     background: rgba(37, 37, 37, 0.842);
     border-radius: 1rem;
     color: rgb(222, 224, 230);
@@ -46,7 +47,7 @@
     .App{
         margin: 0%;
         height: 700px;
-        background: url(https://i.pinimg.com/originals/1a/05/b4/1a05b475a964ec0c563c9c2c8383d0ae.jpg);
+        background: url(https://mobilehd.blob.core.windows.net/main/2015/11/road-fog-mountain-car-sky.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         color: rgb(243, 240, 236);
@@ -54,5 +55,7 @@
     .Buttons{
         display: flex;
         justify-content: space-evenly;
+        background: rgba(17, 17, 17, 0.753);
+        padding: 3% 0%;
     }
 }
